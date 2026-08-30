@@ -1,50 +1,61 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
-
-<!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Mystic North Productions</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0e12;color:#e8f1f5;font-family:system-ui,-apple-system,Segoe UI;min-height:100vh}
+.bg{position:fixed;inset:0;background:radial-gradient(70% 50% at 50% 0%, rgba(90,255,200,0.18), transparent), radial-gradient(50% 30% at 80% 15%, rgba(130,120,255,0.15), transparent), #080c10;z-index:-2}
+.hero{text-align:center;padding:10vh 6vw 6vh}
+.top{font-size:11px;letter-spacing:4px;opacity:.6;margin-bottom:18px}
+h1{font-size:clamp(32px,6vw,58px);font-weight:800;letter-spacing:2px;line-height:1}
+.tag{color:#7ff0c5;letter-spacing:3px;margin:16px 0 10px;font-weight:700;font-size:clamp(13px,2vw,16px)}
+.loc{opacity:.7;font-size:14px}
+.motto{margin-top:14px;font-size:12px;letter-spacing:4px;opacity:.5}
+.btns{margin-top:36px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 28px;border-radius:8px;font-weight:700;letter-spacing:1px;font-size:13px;text-decoration:none;display:inline-block}
+.btn1{background:#7ff0c5;color:#051410}
+.btn2{border:1px solid rgba(127,240,197,0.4);color:#7ff0c5;background:rgba(255,255,255,0.04)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:50px auto;padding:0 5vw}
+.card{border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);border-radius:12px;padding:22px;text-align:left}
+.card h3{font-size:13px;letter-spacing:2px;margin-bottom:6px;color:#7ff0c5}
+.card p{font-size:13px;opacity:.7;line-height:1.5}
+.list{max-width:1000px;margin:0 auto;padding:20px 5vw 40px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;font-size:13px;opacity:.8}
+.list b{color:#fff}
+footer{text-align:center;padding:30px;opacity:.4;font-size:11px;letter-spacing:2px;border-top:1px solid rgba(255,255,255,0.06);margin-top:40px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.list{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="hero">
+<div class="top">MARKSTAY, ON • MOBILE ACROSS NORTHERN ONTARIO</div>
+<h1>MYSTIC NORTH PRODUCTIONS</h1>
+<div class="tag">MUSIC PRODUCTION STUDIO & LIVE SOUND EVENTS</div>
+<div class="loc">Real Instruments • Real Room • Real Sound</div>
+<div class="motto">PROFESSIONAL • RELIABLE • ON-THE-ROAD</div>
+<div class="btns">
+<a class="btn btn1" href="mailto:contact@mysticnorth.ca">BOOK STUDIO SESSION</a>
+<a class="btn btn2" href="mailto:contact@mysticnorth.ca">LIVE SOUND / PA + TECH</a>
+</div>
+</div>
+
+<div class="grid">
+<div class="card"><h3>🎙️ STUDIO RECORDING</h3><p>Demos, singles, EPs. Live Sessions — real instruments on your tracks. Sound Design + Digital Production.</p></div>
+<div class="card"><h3>🔊 LIVE SOUND EVENTS</h3><p>Full PA + Sound Tech. Weddings, bars, full bands & outdoor festivals. We bring the sound to you.</p></div>
+<div class="card"><h3>🎸 BACKLINE & RENTAL</h3><p>Drums, amps, PA & backline rental. Rehearsal Space — hourly / monthly, backline included. By appointment.</p></div>
+</div>
+
+<div class="list">
+<div>✅ <b>Sudbury • North Bay • Timmins & beyond</b> — mobile rig</div>
+<div>✅ <b>All genres welcome:</b> Rock • Country • Weddings • Festivals</div>
+<div>✅ <b>20+ years live + studio experience</b></div>
+<div>✅ <b>DM to book your date</b> — contact@mysticnorth.ca</div>
+</div>
+
+<footer>© 2026 MYSTIC NORTH PRODUCTIONS • MYSTICNORTH.CA • MARKSTAY, ON</footer>
+</body>
 </html>
