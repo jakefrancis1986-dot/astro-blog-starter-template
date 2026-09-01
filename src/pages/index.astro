@@ -1,79 +1,80 @@
 ---
 ---
-<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
 <title>Mystic North Productions | 705-561-0253</title>
 <style>
-html,body{margin:0;padding:0;background:#040a14 !important;color:#e8f1f5;font-family:system-ui,Segoe UI,sans-serif;overflow-x:hidden}
-.sky{position:fixed;inset:0;z-index:0;background:linear-gradient(180deg,#0a1426 0%,#091423 35%,#060d18 100%);overflow:hidden}
-.stars{position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 12% 18%,#fff 100%,transparent 0),radial-gradient(1px 1px at 23% 8%,rgba(255,255,255,.9) 100%,transparent 0),radial-gradient(1.2px 1.2px at 35% 15%,#fff 100%,transparent 0),radial-gradient(1px 1px at 48% 22%,#fff 100%,transparent 0),radial-gradient(1.5px 1.5px at 65% 12%,#fff 100%,transparent 0),radial-gradient(1px 1px at 78% 28%,rgba(255,255,255,.8) 100%,transparent 0),radial-gradient(1.3px 1.3px at 88% 10%,#fff 100%,transparent 0);opacity:.85;animation:twinkle 8s ease-in-out infinite alternate}
-@keyframes twinkle{0%{opacity:.6}100%{opacity:1}}
-.aurora{position:absolute;inset:-30% -10% 0 -10%;filter:blur(18px) brightness(1.2);opacity:.9}
-.aurora span{position:absolute;width:120%;height:55%;border-radius:50%;mix-blend-mode:screen;opacity:.7}
-.aurora .a1{top:-10%;left:-15%;background:radial-gradient(60% 80% at 30% 40%,rgba(90,255,180,0.9),rgba(60,255,180,0.3) 40%,transparent 75%);transform:rotate(-8deg);animation:drift1 22s ease-in-out infinite alternate}
-.aurora .a2{top:-18%;left:15%;background:radial-gradient(55% 70% at 60% 50%,rgba(120,110,255,0.75),rgba(120,90,255,0.25) 45%,transparent 80%);transform:rotate(5deg);animation:drift2 28s ease-in-out infinite alternate}
-.aurora .a3{top:-5%;left:35%;background:radial-gradient(70% 60% at 50% 30%,rgba(110,255,220,0.6),rgba(70,255,200,0.2) 50%,transparent 85%);transform:rotate(-3deg);animation:drift1 19s ease-in-out infinite alternate-reverse}
-@keyframes drift1{0%{transform:translateX(-2%) rotate(-8deg)}100%{transform:translateX(4%) rotate(-4deg)}}
-@keyframes drift2{0%{transform:translateX(3%) rotate(5deg)}100%{transform:translateX(-3%) rotate(2deg)}}
-.moon{position:absolute;top:8%;right:10%;width:68px;height:68px;background:radial-gradient(circle at 35% 35%,#fff 0%,#e6f3ff 35%,#b8d0ea 70%,transparent 75%);border-radius:50%;box-shadow:0 0 40px rgba(180,210,255,.6),0 0 80px rgba(140,180,255,.3);opacity:.9}
-.mountains{position:absolute;bottom:0;left:0;right:0;height:42%;z-index:1}
-.mountains svg{position:absolute;bottom:0;width:100%;height:100%;display:block}
-.forest{position:absolute;bottom:-2px;left:0;right:0;height:18%;z-index:2;opacity:.9;background:repeat-x bottom/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40'%3E%3Cpath fill='%23030a0f' d='M0 40 L0 28 L4 18 L8 28 L10 20 L14 28 L16 16 L20 28 L24 22 L28 28 L32 14 L36 28 L40 20 L44 28 L48 18 L52 28 L56 22 L60 28 L64 15 L68 28 L72 20 L76 28 L80 18 L84 28 L88 22 L92 28 L96 12 L100 28 L104 20 L108 28 L112 18 L116 28 L120 24 L124 28 L128 16 L132 28 L136 21 L140 28 L144 17 L148 28 L152 22 L156 28 L160 19 L164 28 L168 23 L172 28 L176 15 L180 28 L184 20 L188 28 L192 18 L196 28 L200 26 L200 40 Z'/%3E%3C/svg%3E")}
-.content{position:relative;z-index:10}
-.topbar{display:flex;justify-content:space-between;padding:14px 24px;background:rgba(0,0,0,0.55);backdrop-filter:blur(12px);border-bottom:1px solid rgba(127,240,197,0.22);color:#7ff0c5;font-weight:900;font-size:12.5px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#060a14;color:#e8f1f5;font-family:system-ui,-apple-system,Segoe UI;min-height:100vh;overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:-4;background:#060a14}
+.bg::before{content:"";position:absolute;inset:0;background:
+radial-gradient(70% 50% at 15% 20%, rgba(100,255,180,0.35), transparent 55%),
+radial-gradient(60% 45% at 85% 15%, rgba(140,100,255,0.32), transparent 60%),
+radial-gradient(80% 60% at 50% 0%, rgba(80,255,200,0.22), transparent 65%),
+radial-gradient(50% 40% at 50% 80%, rgba(100,200,255,0.12), transparent 60%);
+opacity:1}
+.stars{position:fixed;inset:0;z-index:-3;background-image:radial-gradient(white 1px, transparent 1px), radial-gradient(white 1.5px, transparent 1.5px);background-size:90px 90px, 180px 180px;background-position:0 0, 40px 40px;opacity:0.28}
+.snow{position:fixed;inset:0;z-index:-2;opacity:0.12;background-image:radial-gradient(white 1px, transparent 1px);background-size:120px 120px;filter:blur(0.5px)}
+.trees{position:fixed;bottom:0;left:0;right:0;height:260px;z-index:-1;opacity:0.95;background:linear-gradient(to top, rgba(4,10,8,0.9) 0%, transparent 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='120' viewBox='0 0 200 120'%3E%3Cpath fill='%23030a07' d='M0 120 L0 85 L12 72 L7 66 L18 52 L12 46 L24 32 L29 38 L34 18 L40 38 L46 32 L58 46 L52 52 L64 66 L58 72 L70 85 L70 120 Z'/%3E%3C/svg%3E");background-repeat:repeat-x;background-size:200px 120px}
+.topbar{background:rgba(7,18,14,0.85);border-bottom:1px solid rgba(127,240,197,0.15);color:#7ff0c5;text-align:center;padding:12px 22px;font-weight:900;letter-spacing:1px;font-size:13px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(12px)}
 .topbar a{color:#7ff0c5;text-decoration:none}
-.hero{text-align:center;padding:72px 6vw 50px}
-h1{font-size:clamp(36px,6.5vw,68px);font-weight:900;letter-spacing:3px;margin:0;line-height:.95;text-shadow:0 0 12px rgba(127,240,197,0.8),0 0 50px rgba(127,240,197,0.4)}
-.sub{color:#7ff0c5;font-weight:800;letter-spacing:4px;margin:20px 0 10px;font-size:clamp(12px,1.6vw,16px)}
-.small{opacity:.85;font-size:14.5px}
-.phone a{font-size:36px;font-weight:900;color:#7ff0c5;text-decoration:none;display:inline-block;margin-top:26px;text-shadow:0 0 18px rgba(127,240,197,0.7)}
-.btns{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{padding:15px 30px;border-radius:14px;font-weight:900;font-size:13px;text-decoration:none;letter-spacing:1px}
-.btn-green{background:linear-gradient(180deg,#8affcb,#5af0a8);color:#041410;box-shadow:0 0 18px rgba(127,240,197,0.6),0 0 42px rgba(127,240,197,0.25)}
-.btn-outline{border:1.5px solid rgba(127,240,197,0.5);color:#7ff0c5;background:rgba(255,255,255,0.08);backdrop-filter:blur(10px)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1180px;margin:62px auto;padding:0 5vw}
-.card{position:relative;background:linear-gradient(180deg,rgba(18,32,42,0.85),rgba(10,18,28,0.78));border:1px solid rgba(127,240,197,0.22);border-radius:20px;padding:28px;backdrop-filter:blur(16px);box-shadow:0 8px 32px rgba(0,0,0,0.4)}
-.card:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(127,240,197,0.6),transparent)}
-.card h3{color:#7ff0c5;font-size:12.5px;letter-spacing:2.5px;margin:0 0 14px}
-.card p{font-size:14.5px;line-height:1.7;opacity:.92;margin:0}
-.bottom{text-align:center;padding:42px 20px;border-top:1px solid rgba(127,240,197,0.15);background:rgba(0,0,0,0.65);backdrop-filter:blur(10px);margin-top:56px;font-size:13px;opacity:.9}
-.loc{color:#7ff0c5;font-weight:900;letter-spacing:4px;font-size:15px;margin-bottom:14px}
-@media(max-width:900px){.cards{grid-template-columns:1fr}}
+.topbar .right{color:#7ff0c5;border:1px solid rgba(127,240,197,0.3);padding:4px 10px;border-radius:20px;font-size:11px}
+.hero{text-align:center;padding:8vh 6vw 5vh}
+.top{font-size:11px;letter-spacing:4px;opacity:.7;margin-bottom:18px;color:#9af7d0}
+h1{font-size:clamp(32px,6vw,58px);font-weight:900;letter-spacing:2px;line-height:1;text-shadow:0 0 40px rgba(127,240,197,0.4)}
+.tag{color:#7ff0c5;letter-spacing:3px;margin:16px 0 10px;font-weight:800;font-size:clamp(13px,2vw,16px)}
+.loc{opacity:.85;font-size:13px}
+.phone{margin-top:22px;font-size:30px;font-weight:900}
+.phone a{color:#7ff0c5;text-decoration:none}
+.btns{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 28px;border-radius:10px;font-weight:800;letter-spacing:1px;font-size:13px;text-decoration:none;display:inline-block;backdrop-filter:blur(8px)}
+.btn1{background:#7ff0c5;color:#051410;box-shadow:0 0 30px rgba(127,240,197,0.35)}
+.btn2{border:1px solid rgba(127,240,197,0.5);color:#7ff0c5;background:rgba(255,255,255,0.08)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:50px auto;padding:0 5vw}
+.card{border:1px solid rgba(127,240,197,0.18);background:rgba(10,18,22,0.72);backdrop-filter:blur(14px);border-radius:16px;padding:24px;text-align:left;box-shadow:0 8px 32px rgba(0,0,0,0.5)}
+.card h3{font-size:13px;letter-spacing:2px;margin-bottom:10px;color:#7ff0c5}
+.card p{font-size:13.5px;opacity:.88;line-height:1.7}
+.list{max-width:1050px;margin:0 auto;padding:20px 5vw 40px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;font-size:13px;opacity:.85}
+.list b{color:#fff}
+footer{text-align:center;padding:32px 20px;opacity:.9;font-size:12px;letter-spacing:2px;border-top:1px solid rgba(127,240,197,0.12);margin-top:40px;background:rgba(5,10,14,0.7);backdrop-filter:blur(10px)}
+footer .bottom-loc{color:#7ff0c5;font-weight:800;margin-bottom:10px;letter-spacing:3px;font-size:14px}
+@media(max-width:850px){.grid{grid-template-columns:1fr}.list{grid-template-columns:1fr}.topbar{flex-direction:column;gap:6px}}
 </style>
 </head>
 <body>
-<div class="sky">
-<div class="stars"></div>
-<div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
-<div class="moon"></div>
-<div class="mountains"><svg viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 260 L120 180 L240 210 L360 140 L520 190 L640 110 L780 170 L900 120 L1040 200 L1180 160 L1320 210 L1440 180 L1440 320 L0 320 Z" fill="#050d17" opacity="0.9"/><path d="M0 280 L200 210 L400 240 L600 180 L800 230 L1000 190 L1200 240 L1440 210 L1440 320 L0 320 Z" fill="#08131f" opacity="0.95"/></svg></div>
-<div class="forest"></div>
+<div class="bg"></div><div class="stars"></div><div class="snow"></div><div class="trees"></div>
+<div class="topbar">
+<span>📞 CALL / TEXT: <a href="tel:7055610253">705-561-0253</a></span>
+<span class="right">📍 MARKSTAY, ON</span>
 </div>
-<div class="content">
-<div class="topbar"><span>📞 CALL / TEXT: <a href="tel:7055610253">705-561-0253</a></span><span>📍 MARKSTAY, ON</span></div>
 <div class="hero">
+<div class="top">MOBILE ACROSS NORTHERN ONTARIO</div>
 <h1>MYSTIC NORTH PRODUCTIONS</h1>
-<div class="sub">MUSIC PRODUCTION STUDIO & LIVE EVENTS / SOUND TECH</div>
-<div class="small">Real Instruments • Real Room • Real Sound — Under the Northern Lights 🌲</div>
+<div class="tag">MUSIC PRODUCTION STUDIO & LIVE EVENTS / SOUND TECH</div>
+<div class="loc">Real Instruments • Real Room • Real Sound — Under the Northern Lights 🌲</div>
 <div class="phone"><a href="tel:7055610253">705-561-0253</a></div>
 <div class="btns">
-<a class="btn btn-green" href="tel:7055610253">CALL 705-561-0253</a>
-<a class="btn btn-green" href="mailto:contact@mysticnorth.ca">BOOK STUDIO SESSION</a>
-<a class="btn btn-outline" href="mailto:contact@mysticnorth.ca">LIVE SOUND / BANDS & EVENTS</a>
+<a class="btn btn1" href="tel:7055610253">CALL 705-561-0253</a>
+<a class="btn btn1" href="mailto:contact@mysticnorth.ca">BOOK STUDIO SESSION</a>
+<a class="btn btn2" href="mailto:contact@mysticnorth.ca">LIVE SOUND / BANDS & EVENTS</a>
 </div>
 </div>
-<div class="cards">
-<div class="card"><h3>🎙️ STUDIO RECORDING</h3><p><b>Vocals • mixing • mastering.</b><br>Real instruments.<br>Full production.</p></div>
-<div class="card"><h3>🔊 LIVE EVENTS / SOUND TECH</h3><p>Live sound for <b>bands, weddings, festivals</b> + DJ service.</p></div>
-<div class="card"><h3>🎸 BACKLINE & RENTAL</h3><p>Gear rental <b>amps, PA, monitors</b>.<br>Backline & rehearsal space.</p></div>
+<div class="grid">
+<div class="card"><h3>🎙️ STUDIO RECORDING</h3><p><b>Vocals • mixing • mastering.</b> Professional studio recording. <b>Real instruments and digital music production</b>. Full production for bands & artists.</p></div>
+<div class="card"><h3>🔊 LIVE EVENTS / SOUND TECH</h3><p>Live sound for <b>bands, weddings, festivals</b> + DJ service. PA rental, lighting, full event tech support on-site across Northern Ontario. Weddings, bars, bands & outdoor festivals.</p></div>
+<div class="card"><h3>🎸 BACKLINE & RENTAL</h3><p>Gear rental including <b>amps, PA, monitors</b>. Backline packages for bands & venues. <b>Rehearsal Space available.</b></p></div>
 </div>
-<div class="bottom">
-<div class="loc">SUDBURY TO NORTH BAY & BEYOND</div>
-© 2026 MYSTIC NORTH PRODUCTIONS • 705-561-0253 • MARKSTAY, ON<br>🌲 STUDIO | LIVE EVENTS | SOUND TECH | BANDS • WEDDINGS • FESTIVALS • DJ 🌲
+<div class="list">
+<div>✅ <b>Bands • Weddings • Festivals • DJ Service</b> — professional live sound</div>
+<div>✅ <b>Real instruments + digital + vocals / mix / master</b></div>
+<div>✅ <b>Backline: amps, PA, monitors + Rehearsal Space</b></div>
+<div>✅ <b>Call/Text 705-561-0253</b> — contact@mysticnorth.ca</div>
 </div>
-</div>
+<footer>
+<div class="bottom-loc">SUDBURY TO NORTH BAY & BEYOND</div>
+© 2026 MYSTIC NORTH PRODUCTIONS • 705-561-0253 • MYSTICNORTH.CA • MARKSTAY, ON<br>🌲 STUDIO | LIVE EVENTS | SOUND TECH | BANDS • WEDDINGS • FESTIVALS • DJ 🌲
+</footer>
 </body>
 </html>
