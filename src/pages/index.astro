@@ -7,32 +7,51 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Mystic North Productions | 705-561-0253</title>
 <style>
-html,body{margin:0;padding:0;background:#060a14 !important;color:#e8f1f5;font-family:system-ui,Segoe UI,sans-serif}
-.aurora{position:fixed;inset:0;z-index:0;background:radial-gradient(70% 50% at 15% 25%, rgba(90,255,170,0.4), transparent 60%),radial-gradient(60% 45% at 85% 20%, rgba(150,110,255,0.38), transparent 60%),radial-gradient(90% 60% at 50% 0%, rgba(70,255,190,0.25), transparent 70%),linear-gradient(180deg,#0a1422 0%,#060a14 100%)}
-.aurora:after{content:"";position:absolute;inset:0;background-image:radial-gradient(white 1px, transparent 1px);background-size:90px 90px;opacity:0.18}
-.content{position:relative;z-index:1}
-.topbar{display:flex;justify-content:space-between;padding:14px 24px;background:rgba(0,0,0,0.6);border-bottom:1px solid rgba(127,240,197,0.2);color:#7ff0c5;font-weight:900;font-size:13px}
+html,body{margin:0;padding:0;background:#040a14 !important;color:#e8f1f5;font-family:system-ui,Segoe UI,sans-serif;overflow-x:hidden}
+.sky{position:fixed;inset:0;z-index:0;background:linear-gradient(180deg,#0a1426 0%,#091423 35%,#060d18 100%);overflow:hidden}
+.stars{position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 12% 18%,#fff 100%,transparent 0),radial-gradient(1px 1px at 23% 8%,rgba(255,255,255,.9) 100%,transparent 0),radial-gradient(1.2px 1.2px at 35% 15%,#fff 100%,transparent 0),radial-gradient(1px 1px at 48% 22%,#fff 100%,transparent 0),radial-gradient(1.5px 1.5px at 65% 12%,#fff 100%,transparent 0),radial-gradient(1px 1px at 78% 28%,rgba(255,255,255,.8) 100%,transparent 0),radial-gradient(1.3px 1.3px at 88% 10%,#fff 100%,transparent 0);opacity:.85;animation:twinkle 8s ease-in-out infinite alternate}
+@keyframes twinkle{0%{opacity:.6}100%{opacity:1}}
+.aurora{position:absolute;inset:-30% -10% 0 -10%;filter:blur(18px) brightness(1.2);opacity:.9}
+.aurora span{position:absolute;width:120%;height:55%;border-radius:50%;mix-blend-mode:screen;opacity:.7}
+.aurora .a1{top:-10%;left:-15%;background:radial-gradient(60% 80% at 30% 40%,rgba(90,255,180,0.9),rgba(60,255,180,0.3) 40%,transparent 75%);transform:rotate(-8deg);animation:drift1 22s ease-in-out infinite alternate}
+.aurora .a2{top:-18%;left:15%;background:radial-gradient(55% 70% at 60% 50%,rgba(120,110,255,0.75),rgba(120,90,255,0.25) 45%,transparent 80%);transform:rotate(5deg);animation:drift2 28s ease-in-out infinite alternate}
+.aurora .a3{top:-5%;left:35%;background:radial-gradient(70% 60% at 50% 30%,rgba(110,255,220,0.6),rgba(70,255,200,0.2) 50%,transparent 85%);transform:rotate(-3deg);animation:drift1 19s ease-in-out infinite alternate-reverse}
+@keyframes drift1{0%{transform:translateX(-2%) rotate(-8deg)}100%{transform:translateX(4%) rotate(-4deg)}}
+@keyframes drift2{0%{transform:translateX(3%) rotate(5deg)}100%{transform:translateX(-3%) rotate(2deg)}}
+.moon{position:absolute;top:8%;right:10%;width:68px;height:68px;background:radial-gradient(circle at 35% 35%,#fff 0%,#e6f3ff 35%,#b8d0ea 70%,transparent 75%);border-radius:50%;box-shadow:0 0 40px rgba(180,210,255,.6),0 0 80px rgba(140,180,255,.3);opacity:.9}
+.mountains{position:absolute;bottom:0;left:0;right:0;height:42%;z-index:1}
+.mountains svg{position:absolute;bottom:0;width:100%;height:100%;display:block}
+.forest{position:absolute;bottom:-2px;left:0;right:0;height:18%;z-index:2;opacity:.9;background:repeat-x bottom/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40'%3E%3Cpath fill='%23030a0f' d='M0 40 L0 28 L4 18 L8 28 L10 20 L14 28 L16 16 L20 28 L24 22 L28 28 L32 14 L36 28 L40 20 L44 28 L48 18 L52 28 L56 22 L60 28 L64 15 L68 28 L72 20 L76 28 L80 18 L84 28 L88 22 L92 28 L96 12 L100 28 L104 20 L108 28 L112 18 L116 28 L120 24 L124 28 L128 16 L132 28 L136 21 L140 28 L144 17 L148 28 L152 22 L156 28 L160 19 L164 28 L168 23 L172 28 L176 15 L180 28 L184 20 L188 28 L192 18 L196 28 L200 26 L200 40 Z'/%3E%3C/svg%3E")}
+.content{position:relative;z-index:10}
+.topbar{display:flex;justify-content:space-between;padding:14px 24px;background:rgba(0,0,0,0.55);backdrop-filter:blur(12px);border-bottom:1px solid rgba(127,240,197,0.22);color:#7ff0c5;font-weight:900;font-size:12.5px}
 .topbar a{color:#7ff0c5;text-decoration:none}
-.hero{text-align:center;padding:80px 6vw 50px}
-h1{font-size:clamp(34px,6vw,62px);font-weight:900;letter-spacing:2px;margin:0;text-shadow:0 0 40px rgba(127,240,197,0.5)}
-.sub{color:#7ff0c5;font-weight:800;letter-spacing:3px;margin:18px 0 10px;font-size:16px}
-.small{opacity:.8;font-size:14px}
-.phone a{font-size:34px;font-weight:900;color:#7ff0c5;text-decoration:none;display:block;margin-top:24px}
-.btns{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{padding:15px 30px;border-radius:12px;font-weight:900;font-size:13px;text-decoration:none}
-.btn-green{background:#7ff0c5;color:#041410;box-shadow:0 0 30px rgba(127,240,197,0.4)}
-.btn-outline{border:1px solid rgba(127,240,197,0.5);color:#7ff0c5;background:rgba(255,255,255,0.08)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1150px;margin:60px auto;padding:0 5vw}
-.card{background:rgba(12,20,28,0.75);border:1px solid rgba(127,240,197,0.2);border-radius:18px;padding:26px;backdrop-filter:blur(14px)}
-.card h3{color:#7ff0c5;font-size:13px;letter-spacing:2px;margin-bottom:12px}
-.card p{font-size:14px;line-height:1.7;opacity:.9}
-.bottom{text-align:center;padding:40px 20px;border-top:1px solid rgba(127,240,197,0.15);background:rgba(0,0,0,0.6);margin-top:50px}
-.loc{color:#7ff0c5;font-weight:900;letter-spacing:3px;font-size:15px;margin-bottom:12px}
+.hero{text-align:center;padding:72px 6vw 50px}
+h1{font-size:clamp(36px,6.5vw,68px);font-weight:900;letter-spacing:3px;margin:0;line-height:.95;text-shadow:0 0 12px rgba(127,240,197,0.8),0 0 50px rgba(127,240,197,0.4)}
+.sub{color:#7ff0c5;font-weight:800;letter-spacing:4px;margin:20px 0 10px;font-size:clamp(12px,1.6vw,16px)}
+.small{opacity:.85;font-size:14.5px}
+.phone a{font-size:36px;font-weight:900;color:#7ff0c5;text-decoration:none;display:inline-block;margin-top:26px;text-shadow:0 0 18px rgba(127,240,197,0.7)}
+.btns{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{padding:15px 30px;border-radius:14px;font-weight:900;font-size:13px;text-decoration:none;letter-spacing:1px}
+.btn-green{background:linear-gradient(180deg,#8affcb,#5af0a8);color:#041410;box-shadow:0 0 18px rgba(127,240,197,0.6),0 0 42px rgba(127,240,197,0.25)}
+.btn-outline{border:1.5px solid rgba(127,240,197,0.5);color:#7ff0c5;background:rgba(255,255,255,0.08);backdrop-filter:blur(10px)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1180px;margin:62px auto;padding:0 5vw}
+.card{position:relative;background:linear-gradient(180deg,rgba(18,32,42,0.85),rgba(10,18,28,0.78));border:1px solid rgba(127,240,197,0.22);border-radius:20px;padding:28px;backdrop-filter:blur(16px);box-shadow:0 8px 32px rgba(0,0,0,0.4)}
+.card:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(127,240,197,0.6),transparent)}
+.card h3{color:#7ff0c5;font-size:12.5px;letter-spacing:2.5px;margin:0 0 14px}
+.card p{font-size:14.5px;line-height:1.7;opacity:.92;margin:0}
+.bottom{text-align:center;padding:42px 20px;border-top:1px solid rgba(127,240,197,0.15);background:rgba(0,0,0,0.65);backdrop-filter:blur(10px);margin-top:56px;font-size:13px;opacity:.9}
+.loc{color:#7ff0c5;font-weight:900;letter-spacing:4px;font-size:15px;margin-bottom:14px}
 @media(max-width:900px){.cards{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="aurora"></div>
+<div class="sky">
+<div class="stars"></div>
+<div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+<div class="moon"></div>
+<div class="mountains"><svg viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 260 L120 180 L240 210 L360 140 L520 190 L640 110 L780 170 L900 120 L1040 200 L1180 160 L1320 210 L1440 180 L1440 320 L0 320 Z" fill="#050d17" opacity="0.9"/><path d="M0 280 L200 210 L400 240 L600 180 L800 230 L1000 190 L1200 240 L1440 210 L1440 320 L0 320 Z" fill="#08131f" opacity="0.95"/></svg></div>
+<div class="forest"></div>
+</div>
 <div class="content">
 <div class="topbar"><span>📞 CALL / TEXT: <a href="tel:7055610253">705-561-0253</a></span><span>📍 MARKSTAY, ON</span></div>
 <div class="hero">
@@ -47,9 +66,9 @@ h1{font-size:clamp(34px,6vw,62px);font-weight:900;letter-spacing:2px;margin:0;te
 </div>
 </div>
 <div class="cards">
-<div class="card"><h3>🎙️ STUDIO RECORDING</h3><p><b>Vocals • mixing • mastering.</b><br>Professional studio recording.<br><b>Real instruments and digital music production.</b><br>Full production.</p></div>
-<div class="card"><h3>🔊 LIVE EVENTS / SOUND TECH</h3><p>Live sound for <b>bands, weddings, festivals</b> + DJ service.<br>PA rental, full event tech support across Northern Ontario.</p></div>
-<div class="card"><h3>🎸 BACKLINE & RENTAL</h3><p>Gear rental <b>amps, PA, monitors</b>.<br>Backline packages for bands & venues.<br><b>Rehearsal Space available.</b></p></div>
+<div class="card"><h3>🎙️ STUDIO RECORDING</h3><p><b>Vocals • mixing • mastering.</b><br>Real instruments.<br>Full production.</p></div>
+<div class="card"><h3>🔊 LIVE EVENTS / SOUND TECH</h3><p>Live sound for <b>bands, weddings, festivals</b> + DJ service.</p></div>
+<div class="card"><h3>🎸 BACKLINE & RENTAL</h3><p>Gear rental <b>amps, PA, monitors</b>.<br>Backline & rehearsal space.</p></div>
 </div>
 <div class="bottom">
 <div class="loc">SUDBURY TO NORTH BAY & BEYOND</div>
