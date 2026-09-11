@@ -22,7 +22,7 @@ h1{font-size:clamp(32px,6vw,58px);font-weight:900;letter-spacing:2px;line-height
 .btns{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .btn{padding:14px 28px;border-radius:10px;font-weight:800;letter-spacing:1px;font-size:13px;text-decoration:none;display:inline-block}
 .btn1{background:linear-gradient(135deg, #D4AF37, #FFD700);color:#000}
-.btn2{border:1px solid #D4AF37;color:#D4AF37}
+.btn2{border:1px solid #D4AF37;color:#D4AF37;background:rgba(212,175,55,0.1)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:50px auto;padding:0 5vw}
 .card{border:1px solid rgba(212,175,55,0.3);background:#111;border-radius:16px;padding:24px;text-align:left}
 .card h3{font-size:13px;letter-spacing:2px;margin-bottom:10px;color:#D4AF37}
@@ -30,66 +30,4 @@ h1{font-size:clamp(32px,6vw,58px);font-weight:900;letter-spacing:2px;line-height
 .list{max-width:1050px;margin:0 auto;padding:20px 5vw 20px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;font-size:13px}
 .list b{color:#fff}
 .form-wrap{max-width:600px;margin:20px auto 40px;background:#111;border:1px solid rgba(212,175,55,0.3);border-radius:18px;padding:28px}
-.form-wrap h2{color:#D4AF37;letter-spacing:2px;font-size:16px;text-align:center;margin-bottom:18px}
-.form-wrap input,.form-wrap select,.form-wrap textarea{width:100%;padding:12px 14px;margin-bottom:12px;border-radius:10px;border:1px solid rgba(212,175,55,0.25);background:#000;color:#fff;font-size:14px;outline:none}
-.form-wrap button{width:100%;padding:14px;background:linear-gradient(135deg, #D4AF37, #FFD700);color:#000;border:none;border-radius:10px;font-weight:900;letter-spacing:1px;cursor:pointer}
-footer{text-align:center;padding:32px 20px;font-size:12px;letter-spacing:2px;border-top:1px solid rgba(212,175,55,0.2);margin-top:40px;background:#0a0a0a}
-footer .bottom-loc{color:#D4AF37;font-weight:800;margin-bottom:10px;letter-spacing:3px;font-size:14px}
-@media(max-width:850px){.grid{grid-template-columns:1fr}.list{grid-template-columns:1fr}.topbar{flex-direction:column;gap:6px}}
-</style>
-</head>
-<body>
-<div class="topbar">
-<span>📞 CALL / TEXT: <a href="tel:7055610253">705-561-0253</a></span>
-<span class="right">📍 MARKSTAY, ON | MYSTICNORTHSOUND.CA</span>
-</div>
-<div class="hero">
-<div class="top">MOBILE ACROSS NORTHERN ONTARIO</div>
-<h1>MYSTIC NORTH SOUND PRODUCTIONS</h1>
-<div class="tag">MUSIC PRODUCTION STUDIO & LIVE EVENTS / SOUND TECH</div>
-<div class="loc">Real Instruments • Real Room • Real Sound — Under the Northern Lights 🌲</div>
-<div class="phone"><a href="tel:7055610253">705-561-0253</a></div>
-<div class="btns">
-<a class="btn btn1" href="#book">BOOK STUDIO SESSION</a>
-<a class="btn btn1" href="tel:7055610253">CALL 705-561-0253</a>
-</div>
-</div>
-<div class="grid">
-<div class="card"><h3>🎙️ STUDIO RECORDING</h3><p><b>Vocals • mixing • mastering.</b> Professional studio recording. <b>Real instruments and digital music production</b>.</p></div>
-<div class="card"><h3>🔊 LIVE EVENTS / SOUND TECH</h3><p>Live sound for <b>bands, weddings, festivals</b> + DJ service. PA rental, lighting, full event tech support.</p></div>
-<div class="card"><h3>🎸 BACKLINE & RENTAL</h3><p>Gear rental including <b>amps, PA, monitors</b>. Backline packages. <b>Rehearsal Space available.</b></p></div>
-</div>
-<div class="form-wrap" id="book">
-<h2>BOOK A SESSION / GET A QUOTE</h2>
-<form action="https://formsubmit.co/contact@mysticnorth.ca" method="POST">
-<input type="hidden" name="_subject" value="New Booking - Mystic North Sound">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://mysticnorthsound.ca/?booked=true">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
-<input type="email" name="email" placeholder="Your Email">
-<select name="service" required>
-<option value="">Select Service...</option>
-<option value="Studio Recording">Studio Recording</option>
-<option value="Live Sound / PA">Live Sound / PA</option>
-<option value="Wedding / Festival">Wedding / Festival</option>
-<option value="Mixing / Mastering">Mixing / Mastering</option>
-<option value="Rehearsal / Backline Rental">Rehearsal / Backline Rental</option>
-</select>
-<textarea name="message" rows="4" placeholder="Tell me about your event / project, date, location..." required></textarea>
-<button type="submit">SEND BOOKING REQUEST →</button>
-</form>
-<p style="text-align:center;margin-top:10px;font-size:11px;opacity:.6">Or call/text 705-561-0253</p>
-</div>
-<div class="list">
-<div>✅ <b>Bands • Weddings • Festivals • DJ Service</b></div>
-<div>✅ <b>Real instruments + digital + vocals / mix / master</b></div>
-<div>✅ <b>Backline: amps, PA, monitors + Rehearsal Space</b></div>
-<div>✅ <b>705-561-0253 — Sudbury to North Bay & Beyond</b></div>
-</div>
-<footer>
-<div class="bottom-loc">SUDBURY TO NORTH BAY & BEYOND</div>
-© 2026 MYSTIC NORTH SOUND PRODUCTIONS • 705-561-0253 • MYSTICNORTH.CA • MYSTICNORTHSOUND.CA • MARKSTAY, ON<br>🌲 STUDIO | LIVE EVENTS | SOUND TECH | BANDS • WEDDINGS • FESTIVALS • DJ 🌲
-</footer>
-</body>
-</html>
+.form-wrap h2{color:#D4AF37;letter-spacing:2px;font-size:16px;text
