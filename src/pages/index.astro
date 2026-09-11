@@ -1,5 +1,4 @@
----
----
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -7,28 +6,19 @@
 <title>Mystic North Sound Productions | 705-561-0253</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#f5f0e8;font-family:system-ui,-apple-system,Segoe UI;min-height:100vh;overflow-x:hidden}
-.bg{position:fixed;inset:0;z-index:-4;background:#000}
-.bg::before{content:"";position:absolute;inset:0;background:
-radial-gradient(70% 50% at 15% 20%, rgba(212,175,55,0.18), transparent 55%),
-radial-gradient(60% 45% at 85% 15%, rgba(255,215,0,0.12), transparent 60%),
-radial-gradient(80% 60% at 50% 0%, rgba(212,175,55,0.15), transparent 65%),
-radial-gradient(50% 40% at 50% 80%, rgba(212,175,55,0.08), transparent 60%);
-opacity:1}
-.stars{position:fixed;inset:0;z-index:-3;background-image:radial-gradient(rgba(212,175,55,0.8) 1px, transparent 1px), radial-gradient(rgba(212,175,55,0.5) 1.5px, transparent 1.5px);background-size:90px 90px, 180px 180px;background-position:0 0, 40px 40px;opacity:0.22}
-.snow{position:fixed;inset:0;z-index:-2;opacity:0.08;background-image:radial-gradient(rgba(212,175,55,0.6) 1px, transparent 1px);background-size:120px 120px;filter:blur(0.5px)}
-.trees{position:fixed;bottom:0;left:0;right:0;height:260px;z-index:-1;opacity:0.7;background:linear-gradient(to top, rgba(10,8,4,0.9) 0%, transparent 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='120' viewBox='0 0 200 120'%3E%3Cpath fill='%23080500' d='M0 120 L0 85 L12 72 L7 66 L18 52 L12 46 L24 32 L29 38 L34 18 L40 38 L46 32 L58 46 L52 52 L64 66 L58 72 L70 85 L70 120 Z'/%3E%3C/svg%3E");background-repeat:repeat-x;background-size:200px 120px}
-.topbar{background:rgba(10,10,10,0.9);border-bottom:1px solid rgba(212,175,55,0.25);color:#D4AF37;text-align:center;padding:12px 22px;font-weight:900;letter-spacing:1px;font-size:13px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(12px)}
+body{background:#000;color:#f5f0e8;font-family:system-ui,-apple-system,Segoe UI;min-height:100vh}
+.topbar{background:#0a0a0a;border-bottom:1px solid #D4AF37;color:#D4AF37;text-align:center;padding:12px 22px;font-weight:900;letter-spacing:1px;font-size:13px;display:flex;justify-content:space-between;align-items:center}
 .topbar a{color:#D4AF37;text-decoration:none}
-.topbar .right{color:#D4AF37;border:1px solid rgba(212,175,55,0.35);padding:4px 12px;border-radius:20px;font-size:11px}
-.hero{text-align:center;padding:8vh 6vw 5vh}
-.top{font-size:11px;letter-spacing:4px;opacity:.8;margin-bottom:18px;color:#D4AF37}
-h1{font-size:clamp(32px,6vw,58px);font-weight:900;letter-spacing:2px;line-height:1;text-shadow:0 0 40px rgba(212,175,55,0.35);color:#fff}
+.topbar .right{border:1px solid rgba(212,175,55,0.4);padding:4px 12px;border-radius:20px;font-size:11px}
+.hero{text-align:center;padding:8vh 6vw 5vh;background:radial-gradient(80% 60% at 50% 0%, rgba(212,175,55,0.18), transparent 65%), #000}
+.top{font-size:11px;letter-spacing:4px;margin-bottom:18px;color:#D4AF37}
+h1{font-size:clamp(32px,6vw,58px);font-weight:900;letter-spacing:2px;line-height:1;color:#fff}
 .tag{color:#D4AF37;letter-spacing:3px;margin:16px 0 10px;font-weight:800;font-size:clamp(13px,2vw,16px)}
-.loc{opacity:.9;font-size:13px;color:#e8e0d0}
+.loc{color:#e8e0d0;font-size:13px}
 .phone{margin-top:22px;font-size:30px;font-weight:900}
 .phone a{color:#D4AF37;text-decoration:none}
 .btns{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{padding:14px 28px;border-radius:10px;font-weight:800;letter-spacing:1px;font-size:13px;text-decoration:none;display:inline-block;backdrop-filter:blur(8px)}
-.btn1{background:linear-gradient(135deg, #D4AF37, #FFD700);color:#000;box-shadow:0 0 30px rgba(212,175,55,0.45)}
-.btn2{border:1px solid rgba(212,175,55,0.5);color:#
+.btn{padding:14px 28px;border-radius:10px;font-weight:800;letter-spacing:1px;font-size:13px;text-decoration:none;display:inline-block}
+.btn1{background:linear-gradient(135deg, #D4AF37, #FFD700);color:#000}
+.btn2{border:1px solid #D4AF37;color:#D4AF37}
+.grid{display:grid;grid-template-columns:repeat(3,
