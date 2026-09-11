@@ -4,77 +4,31 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
-<title>Mystic North Productions | 705-561-0253</title>
+<title>Mystic North Sound Productions | 705-561-0253</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#060a14;color:#e8f1f5;font-family:system-ui,-apple-system,Segoe UI;min-height:100vh;overflow-x:hidden}
-.bg{position:fixed;inset:0;z-index:-4;background:#060a14}
+body{background:#000;color:#f5f0e8;font-family:system-ui,-apple-system,Segoe UI;min-height:100vh;overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:-4;background:#000}
 .bg::before{content:"";position:absolute;inset:0;background:
-radial-gradient(70% 50% at 15% 20%, rgba(100,255,180,0.35), transparent 55%),
-radial-gradient(60% 45% at 85% 15%, rgba(140,100,255,0.32), transparent 60%),
-radial-gradient(80% 60% at 50% 0%, rgba(80,255,200,0.22), transparent 65%),
-radial-gradient(50% 40% at 50% 80%, rgba(100,200,255,0.12), transparent 60%);
+radial-gradient(70% 50% at 15% 20%, rgba(212,175,55,0.18), transparent 55%),
+radial-gradient(60% 45% at 85% 15%, rgba(255,215,0,0.12), transparent 60%),
+radial-gradient(80% 60% at 50% 0%, rgba(212,175,55,0.15), transparent 65%),
+radial-gradient(50% 40% at 50% 80%, rgba(212,175,55,0.08), transparent 60%);
 opacity:1}
-.stars{position:fixed;inset:0;z-index:-3;background-image:radial-gradient(white 1px, transparent 1px), radial-gradient(white 1.5px, transparent 1.5px);background-size:90px 90px, 180px 180px;background-position:0 0, 40px 40px;opacity:0.28}
-.snow{position:fixed;inset:0;z-index:-2;opacity:0.12;background-image:radial-gradient(white 1px, transparent 1px);background-size:120px 120px;filter:blur(0.5px)}
-.trees{position:fixed;bottom:0;left:0;right:0;height:260px;z-index:-1;opacity:0.95;background:linear-gradient(to top, rgba(4,10,8,0.9) 0%, transparent 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='120' viewBox='0 0 200 120'%3E%3Cpath fill='%23030a07' d='M0 120 L0 85 L12 72 L7 66 L18 52 L12 46 L24 32 L29 38 L34 18 L40 38 L46 32 L58 46 L52 52 L64 66 L58 72 L70 85 L70 120 Z'/%3E%3C/svg%3E");background-repeat:repeat-x;background-size:200px 120px}
-.topbar{background:rgba(7,18,14,0.85);border-bottom:1px solid rgba(127,240,197,0.15);color:#7ff0c5;text-align:center;padding:12px 22px;font-weight:900;letter-spacing:1px;font-size:13px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(12px)}
-.topbar a{color:#7ff0c5;text-decoration:none}
-.topbar .right{color:#7ff0c5;border:1px solid rgba(127,240,197,0.3);padding:4px 10px;border-radius:20px;font-size:11px}
+.stars{position:fixed;inset:0;z-index:-3;background-image:radial-gradient(rgba(212,175,55,0.8) 1px, transparent 1px), radial-gradient(rgba(212,175,55,0.5) 1.5px, transparent 1.5px);background-size:90px 90px, 180px 180px;background-position:0 0, 40px 40px;opacity:0.22}
+.snow{position:fixed;inset:0;z-index:-2;opacity:0.08;background-image:radial-gradient(rgba(212,175,55,0.6) 1px, transparent 1px);background-size:120px 120px;filter:blur(0.5px)}
+.trees{position:fixed;bottom:0;left:0;right:0;height:260px;z-index:-1;opacity:0.7;background:linear-gradient(to top, rgba(10,8,4,0.9) 0%, transparent 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='120' viewBox='0 0 200 120'%3E%3Cpath fill='%23080500' d='M0 120 L0 85 L12 72 L7 66 L18 52 L12 46 L24 32 L29 38 L34 18 L40 38 L46 32 L58 46 L52 52 L64 66 L58 72 L70 85 L70 120 Z'/%3E%3C/svg%3E");background-repeat:repeat-x;background-size:200px 120px}
+.topbar{background:rgba(10,10,10,0.9);border-bottom:1px solid rgba(212,175,55,0.25);color:#D4AF37;text-align:center;padding:12px 22px;font-weight:900;letter-spacing:1px;font-size:13px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(12px)}
+.topbar a{color:#D4AF37;text-decoration:none}
+.topbar .right{color:#D4AF37;border:1px solid rgba(212,175,55,0.35);padding:4px 12px;border-radius:20px;font-size:11px}
 .hero{text-align:center;padding:8vh 6vw 5vh}
-.top{font-size:11px;letter-spacing:4px;opacity:.7;margin-bottom:18px;color:#9af7d0}
-h1{font-size:clamp(32px,6vw,58px);font-weight:900;letter-spacing:2px;line-height:1;text-shadow:0 0 40px rgba(127,240,197,0.4)}
-.tag{color:#7ff0c5;letter-spacing:3px;margin:16px 0 10px;font-weight:800;font-size:clamp(13px,2vw,16px)}
-.loc{opacity:.85;font-size:13px}
+.top{font-size:11px;letter-spacing:4px;opacity:.8;margin-bottom:18px;color:#D4AF37}
+h1{font-size:clamp(32px,6vw,58px);font-weight:900;letter-spacing:2px;line-height:1;text-shadow:0 0 40px rgba(212,175,55,0.35);color:#fff}
+.tag{color:#D4AF37;letter-spacing:3px;margin:16px 0 10px;font-weight:800;font-size:clamp(13px,2vw,16px)}
+.loc{opacity:.9;font-size:13px;color:#e8e0d0}
 .phone{margin-top:22px;font-size:30px;font-weight:900}
-.phone a{color:#7ff0c5;text-decoration:none}
+.phone a{color:#D4AF37;text-decoration:none}
 .btns{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .btn{padding:14px 28px;border-radius:10px;font-weight:800;letter-spacing:1px;font-size:13px;text-decoration:none;display:inline-block;backdrop-filter:blur(8px)}
-.btn1{background:#7ff0c5;color:#051410;box-shadow:0 0 30px rgba(127,240,197,0.35)}
-.btn2{border:1px solid rgba(127,240,197,0.5);color:#7ff0c5;background:rgba(255,255,255,0.08)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:50px auto;padding:0 5vw}
-.card{border:1px solid rgba(127,240,197,0.18);background:rgba(10,18,22,0.72);backdrop-filter:blur(14px);border-radius:16px;padding:24px;text-align:left;box-shadow:0 8px 32px rgba(0,0,0,0.5)}
-.card h3{font-size:13px;letter-spacing:2px;margin-bottom:10px;color:#7ff0c5}
-.card p{font-size:13.5px;opacity:.88;line-height:1.7}
-.list{max-width:1050px;margin:0 auto;padding:20px 5vw 40px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;font-size:13px;opacity:.85}
-.list b{color:#fff}
-footer{text-align:center;padding:32px 20px;opacity:.9;font-size:12px;letter-spacing:2px;border-top:1px solid rgba(127,240,197,0.12);margin-top:40px;background:rgba(5,10,14,0.7);backdrop-filter:blur(10px)}
-footer .bottom-loc{color:#7ff0c5;font-weight:800;margin-bottom:10px;letter-spacing:3px;font-size:14px}
-@media(max-width:850px){.grid{grid-template-columns:1fr}.list{grid-template-columns:1fr}.topbar{flex-direction:column;gap:6px}}
-</style>
-</head>
-<body>
-<div class="bg"></div><div class="stars"></div><div class="snow"></div><div class="trees"></div>
-<div class="topbar">
-<span>📞 CALL / TEXT: <a href="tel:7055610253">705-561-0253</a></span>
-<span class="right">📍 MARKSTAY, ON</span>
-</div>
-<div class="hero">
-<div class="top">MOBILE ACROSS NORTHERN ONTARIO</div>
-<h1>MYSTIC NORTH PRODUCTIONS</h1>
-<div class="tag">MUSIC PRODUCTION STUDIO & LIVE EVENTS / SOUND TECH</div>
-<div class="loc">Real Instruments • Real Room • Real Sound — Under the Northern Lights 🌲</div>
-<div class="phone"><a href="tel:7055610253">705-561-0253</a></div>
-<div class="btns">
-<a class="btn btn1" href="tel:7055610253">CALL 705-561-0253</a>
-<a class="btn btn1" href="mailto:contact@mysticnorth.ca">BOOK STUDIO SESSION</a>
-<a class="btn btn2" href="mailto:contact@mysticnorth.ca">LIVE SOUND / BANDS & EVENTS</a>
-</div>
-</div>
-<div class="grid">
-<div class="card"><h3>🎙️ STUDIO RECORDING</h3><p><b>Vocals • mixing • mastering.</b> Professional studio recording. <b>Real instruments and digital music production</b>. Full production for bands & artists.</p></div>
-<div class="card"><h3>🔊 LIVE EVENTS / SOUND TECH</h3><p>Live sound for <b>bands, weddings, festivals</b> + DJ service. PA rental, lighting, full event tech support on-site across Northern Ontario. Weddings, bars, bands & outdoor festivals.</p></div>
-<div class="card"><h3>🎸 BACKLINE & RENTAL</h3><p>Gear rental including <b>amps, PA, monitors</b>. Backline packages for bands & venues. <b>Rehearsal Space available.</b></p></div>
-</div>
-<div class="list">
-<div>✅ <b>Bands • Weddings • Festivals • DJ Service</b> — professional live sound</div>
-<div>✅ <b>Real instruments + digital + vocals / mix / master</b></div>
-<div>✅ <b>Backline: amps, PA, monitors + Rehearsal Space</b></div>
-<div>✅ <b>Call/Text 705-561-0253</b> — contact@mysticnorth.ca</div>
-</div>
-<footer>
-<div class="bottom-loc">SUDBURY TO NORTH BAY & BEYOND</div>
-© 2026 MYSTIC NORTH PRODUCTIONS • 705-561-0253 • MYSTICNORTH.CA • MARKSTAY, ON<br>🌲 STUDIO | LIVE EVENTS | SOUND TECH | BANDS • WEDDINGS • FESTIVALS • DJ 🌲
-</footer>
-</body>
-</html>
+.btn1{background:linear-gradient(135deg, #D4AF37, #FFD700);color:#000;box-shadow:0 0 30px rgba(212,175,55,0.45)}
+.btn2{border:1px solid rgba(212,175,55,0.5);color:#
