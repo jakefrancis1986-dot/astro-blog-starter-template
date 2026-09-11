@@ -1,19 +1,13 @@
-export const onRequest = async (context: any, next: any) => {
+export async function onRequest(context: any, next: any) {
   const url = new URL(context.request.url);
-  const host = url.hostname;
+  const hostname = url.hostname;
 
-  // If someone comes via mysticnorth.ca, send them to mysticnorthsound.ca
-  if (host === 'mysticnorth.ca' || host === 'www.mysticnorth.ca') {
-    url.hostname = 'mysticnorthsound.ca';
-    url.protocol = 'https:';
-    return Response.redirect(url.toString(), 301);
+  if (hostname === 'mysticnorth.ca' || hostname === 'www.mysticnorth.ca') {
+    return Response.redirect('https://mysticnorthsound.ca' + url.pathname + url.search, 301);
   }
-
-  // Also force www.mysticnorthsound.ca -> mysticnorthsound.ca (clean)
-  if (host === 'www.mysticnorthsound.ca') {
-    url.hostname = 'mysticnorthsound.ca';
-    return Response.redirect(url.toString(), 301);
+  if (hostname === 'www.mysticnorthsound.ca') {
+    return Response.redirect('https://mysticnorthsound.ca' + url.pathname + url.search, 301);
   }
 
   return next();
-};
+}
